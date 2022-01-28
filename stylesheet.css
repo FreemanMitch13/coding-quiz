@@ -1,0 +1,166 @@
+:root{
+    --grey: rgb(188, 189, 192);
+    --red: rgb(146, 20, 12);
+}
+body {
+    background-color: var(--grey);
+    font-size: 16px;
+    font-family: 'Times New Roman', Times, serif;
+}
+a {
+    color:var(--red)  
+}
+a:hover {
+    color: white;
+}
+ul {
+    list-style-type: none;
+}
+#timer {
+    font-weight: bolder;
+    position: fixed;
+    top: 0;
+    right: 0;
+    color: var(--red);
+    text-decoration: underline;
+    padding: 5px;
+    margin: 5px;
+}
+#highscores {
+    position: fixed;
+    top: 0;
+    left: 0;
+    border: transparent;
+    margin: 5px;
+    padding: 5px;
+}
+#highscores:hover {
+    background-color: var(--red);
+    color: white;
+}
+header {
+    color: white;
+    background-color: var(--red);
+    border: black;
+    border-style: dashed;
+    border-width: 1px;
+    border-radius: 15px;
+    text-align: center;
+    margin: auto;
+    margin-top: 75px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    height: 30px;
+    width: 50%;
+    font-size: 20px;
+    text-decoration: underline;
+}
+.gameArea {
+    background-color: white;
+    border: var(--red);
+    border-style: dashed;
+    border-width: 1px;
+    border-radius: 20px;
+    padding: 15px;
+    margin: 15px;
+    text-align: center;
+    margin: auto;
+    margin-top: 20px;
+    height: 300px;
+    width: 50%;
+}
+#infoCard {
+    font-weight: bold;
+    text-align: center;
+    border-style: dashed;
+    border-width: 1px;
+    border-radius: 20px;
+    padding: 15px;
+    margin: 15px;
+    box-shadow: 10px 10px var(--red);
+}
+#cardOne {
+    display: none;
+    font-weight: bold;
+    border-style: dashed;
+    border-width: 1px;
+    border-radius: 20px;
+    padding: 15px;
+    margin: 15px;
+    box-shadow: 10px 10px var(--red);
+}
+#cardTwo{
+    display: none;
+    font-weight: bold;
+    border-style: dashed;
+    border-width: 1px;
+    border-radius: 20px;
+    padding: 15px;
+    margin: 15px;
+    box-shadow: 10px 10px var(--red);
+}
+#cardThree {
+    display: none;
+    font-weight: bold;
+    border-style: dashed;
+    border-width: 1px;
+    border-radius: 20px;
+    padding: 15px;
+    margin: 15px;
+    box-shadow: 10px 10px var(--red);
+}
+#cardFour {
+    display: none;
+    font-weight: bold;
+    border-style: dashed;
+    border-width: 1px;
+    border-radius: 20px;
+    padding: 15px;
+    margin: 15px;
+    box-shadow: 10px 10px var(--red);
+}
+#cardFive {
+    display: none;
+    font-weight: bold;
+    border-style: dashed;
+    border-width: 1px;
+    border-radius: 20px;
+    padding: 15px;
+    margin: 15px;
+    box-shadow: 10px 10px var(--red);
+}
+#gameOver {
+    display: none;
+    font-weight: bold;
+    border-style: dashed;
+    border-width: 1px;
+    border-radius: 20px;
+    padding: 15px;
+    margin: 15px;
+    box-shadow: 10px 10px var(--red);
+}
+#startQuiz {
+    background-color: var(--red);
+    color: white;
+}
+#startQuiz:hover{
+    transform: scale(1.1);
+}
+.answerChoices{
+    border: black;
+    border-style: dotted;
+    border-width: 1px;
+    border-radius: 15px;
+    padding: 5px;
+    margin: 5px;
+    background-color: var(--red);
+    color: white;
+}
+.answerChoices:hover {
+    background-color: var(--grey);
+    color: var(--red);
+    transform: scale(1.1);
+}
+
