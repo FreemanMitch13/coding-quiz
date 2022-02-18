@@ -20,26 +20,60 @@ var spanThree= document.getElementById("q3Message");
 var spanFour= document.getElementById("q4Message");
 var spanFive= document.getElementById("q5Message");
 
+var secondsLeft = 70;
+timerEl.textContent = "Time: " + secondsLeft;
+function setTime() {
+  var timerInterval = setInterval(function() {
+    secondsLeft--;
+    timerEl.textContent = "Time: " + secondsLeft;
+    if(secondsLeft === 0) {
+      clearInterval(timerInterval);
+    }
+  }, 1000);
+}
 
 startBtn.addEventListener("click", showQuestion1);
+
 function showQuestion1() {
-    setTime();
+    setTime();    
     questionOne.style.display = "block";
     if (questionOne.style.display === "block") {
         gameInfo.style.display = "none";
     }
 };
 
-correctAnswer1.addEventListener("click", correctMessage); 
+var q1buttons = document.querySelectorAll('button[id^=q1]');
+console.log(q1buttons.length);
+console.log(q1buttons);
+console.log(q1buttons[1]);
+
 function correctMessage(){
-    spanOne.innerHTML= "That is Correct!";
+    spanOne.innerHTML= "That is Correct!";   
 }
+function incorrectMessage(){
+    spanOne.innerHTML= "Sorry, that's incorrect.";
+}
+function checkAnswer(){
+    console.log(q1buttons[1].clicked);
+    if(q1buttons[1].clicked == true){
+        correctMessage();
+    }else{
+        incorrectMessage();
+    }
+    // setTimeout(showQuestion2, 1000);
+}
+
+for (var i=0; i<q1buttons.length; i++){
+    q1buttons[i].addEventListener("click",checkAnswer)
+}
+
 
 function showQuestion2() {
     questionTwo.style.display = "block";
     if (questionTwo.style.display === "block") {
         questionOne.style.display = "none";
     }
+    console.log("question2 is working")
 };
 
 questionTwo.addEventListener("click", showQuestion3);
@@ -70,20 +104,6 @@ function showGameover() {
     if (gameOver.style.display === "block") {
         questionFive.style.display = "none";
     }
+    document.getElementById("finalScore").innerHTML = secondsLeft;
 };
-
-var secondsLeft = 71;
-
-function setTime() {
-  var timerInterval = setInterval(function() {
-    secondsLeft--;
-    timerEl.textContent = "Time: " + secondsLeft;
-
-    if(secondsLeft === 0) {
-      clearInterval(timerInterval);
-    }
-
-  }, 1000);
-}
-
 

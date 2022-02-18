@@ -29,10 +29,10 @@
         <div class = "questions" id = "cardOne">
             <p id = "questionOne">How do you write "Good Morning!" in an alert box?</p>
             <ul>
-                <li><button class = "answerChoices" id ="q1a"> A. say("Good Morning!");</button></li>
-                <li><button class = "answerChoices" id ="q1b"> B. alert("Good Morning!");</button></li>
-                <li><button class = "answerChoices" id ="q1c"> C. msg("Good Morning!");</button></li>
-                <li><button class = "answerChoices" id ="q1d"> D. alertBox("Good Morning!");</button></li>
+                <li><button class = "answerChoices" id ="q1a" correct="false"> A. say("Good Morning!");</button></li>
+                <li><button class = "answerChoices" id ="q1b" correct="true"> B. alert("Good Morning!");</button></li>
+                <li><button class = "answerChoices" id ="q1c" correct="false"> C. msg("Good Morning!");</button></li>
+                <li><button class = "answerChoices" id ="q1d" correct="false"> D. alertBox("Good Morning!");</button></li>
             </ul>
             <p id="q1Message"><span></span></p>
         </div>
@@ -83,7 +83,7 @@
         
         <div id = "gameOver">
             <p>Game Over! Thanks for playing!</p>
-            <p id ="score"> Your Score is: </p>
+            <p id ="score"> Your Score is: <span id="finalScore"></span> </p>
             <label for= "intitials" id ="initials"> Your Initials </label>
             <input type="text" name="initials">
         </div>
