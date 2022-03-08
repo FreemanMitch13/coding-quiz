@@ -43,40 +43,56 @@ function showQuestion1() {
 };
 
 var q1buttons = document.querySelectorAll('button[id^=q1]');
-console.log(q1buttons.length);
 console.log(q1buttons);
 console.log(q1buttons[1]);
 
-function correctMessage(){
-    spanOne.innerHTML= "That is Correct!";   
-}
-function incorrectMessage(){
+q1buttons[0].addEventListener("click", function() {
     spanOne.innerHTML= "Sorry, that's incorrect.";
-}
-function checkAnswer(){
-    console.log(q1buttons[1].clicked);
-    if(q1buttons[1].clicked == true){
-        correctMessage();
-    }else{
-        incorrectMessage();
-    }
-    // setTimeout(showQuestion2, 1000);
-}
+    secondsLeft = secondsLeft - 10;
+});
+q1buttons[1].addEventListener("click", function() {
+    spanOne.innerHTML= "That is Correct!";
+});
+q1buttons[2].addEventListener("click", function() {
+    spanOne.innerHTML= "Sorry, that's incorrect.";
+    secondsLeft = secondsLeft - 10;
+});
+q1buttons[3].addEventListener("click", function() {
+    spanOne.innerHTML= "Sorry, that's incorrect.";
+    secondsLeft = secondsLeft - 10;
+});
 
-for (var i=0; i<q1buttons.length; i++){
-    q1buttons[i].addEventListener("click",checkAnswer)
-}
-
+document.getElementById("q1Message").addEventListener("click", showQuestion2);
 
 function showQuestion2() {
     questionTwo.style.display = "block";
     if (questionTwo.style.display === "block") {
         questionOne.style.display = "none";
     }
-    console.log("question2 is working")
 };
 
-questionTwo.addEventListener("click", showQuestion3);
+var q2buttons = document.querySelectorAll('button[id^=q2]');
+console.log(q2buttons);
+console.log(q2buttons[2]);
+
+q2buttons[0].addEventListener("click", function() {
+    spanTwo.innerHTML= "Sorry, that's incorrect.";
+    secondsLeft = secondsLeft - 10;
+});
+q2buttons[1].addEventListener("click", function() {
+    spanTwo.innerHTML= "Sorry, that's incorrect.";
+    secondsLeft = secondsLeft - 10;
+});
+q2buttons[2].addEventListener("click", function() {
+    spanTwo.innerHTML= "That is Correct!";
+});
+q2buttons[3].addEventListener("click", function() {
+    spanTwo.innerHTML= "Sorry, that's incorrect.";
+    secondsLeft = secondsLeft - 10;
+});
+
+document.getElementById("q2Message").addEventListener("click", showQuestion3);
+
 function showQuestion3() {
     questionThree.style.display = "block";
     if (questionThree.style.display === "block") {
@@ -84,26 +100,111 @@ function showQuestion3() {
     }
 };
 
-questionThree.addEventListener("click", showQuestion4);
+var q3buttons = document.querySelectorAll('button[id^=q3]');
+console.log(q3buttons);
+console.log(q3buttons[1]);
+
+q3buttons[0].addEventListener("click", function() {
+    spanThree.innerHTML= "Sorry, that's incorrect.";
+    secondsLeft = secondsLeft - 10;
+});
+q3buttons[1].addEventListener("click", function() {
+    spanThree.innerHTML= "That is Correct!";
+});
+q3buttons[2].addEventListener("click", function() {
+    spanThree.innerHTML= "Sorry, that's incorrect.";
+    secondsLeft = secondsLeft - 10;
+});
+q3buttons[3].addEventListener("click", function() {
+    spanThree.innerHTML= "Sorry, that's incorrect.";
+    secondsLeft = secondsLeft - 10;
+});
+
+document.getElementById("q3Message").addEventListener("click", showQuestion4);
+
 function showQuestion4() {
     questionFour.style.display = "block";
     if (questionFour.style.display === "block") {
         questionThree.style.display = "none";
     }
 };
-questionFour.addEventListener("click", showQuestion5);
+
+var q4buttons = document.querySelectorAll('button[id^=q4]');
+console.log(q4buttons);
+console.log(q4buttons[0]);
+
+q4buttons[0].addEventListener("click", function() {
+    spanFour.innerHTML= "That is Correct!";
+});
+q4buttons[1].addEventListener("click", function() {
+    spanFour.innerHTML= "Sorry, that's incorrect.";
+    secondsLeft = secondsLeft - 10;
+});
+q4buttons[2].addEventListener("click", function() {
+    spanFour.innerHTML= "Sorry, that's incorrect.";
+    secondsLeft = secondsLeft - 10;
+});
+q4buttons[3].addEventListener("click", function() {
+    spanFour.innerHTML= "Sorry, that's incorrect.";
+    secondsLeft = secondsLeft - 10;
+});
+
+document.getElementById("q4Message").addEventListener("click", showQuestion5);
+
+
 function showQuestion5() {
     questionFive.style.display = "block";
     if (questionFive.style.display === "block") {
         questionFour.style.display = "none";
     }
 };
-questionFive.addEventListener("click", showGameover);
-function showGameover() {
+
+var q5buttons = document.querySelectorAll('button[id^=q5]');
+console.log(q5buttons);
+console.log(q5buttons[3]);
+
+q5buttons[0].addEventListener("click", function() {
+    spanFive.innerHTML= "Sorry, that's incorrect.";
+    secondsLeft = secondsLeft - 10;
+});
+q5buttons[1].addEventListener("click", function() {
+    spanFive.innerHTML= "Sorry, that's incorrect.";
+    secondsLeft = secondsLeft - 10;
+});
+q5buttons[2].addEventListener("click", function() {
+    spanFive.innerHTML= "Sorry, that's incorrect.";
+    secondsLeft = secondsLeft - 10;
+});
+q5buttons[3].addEventListener("click", function() {
+    spanFive.innerHTML= "That is Correct!";
+});
+
+document.getElementById("q5Message").addEventListener("click", showGameOver);
+
+function showGameOver() {
     gameOver.style.display = "block";
     if (gameOver.style.display === "block") {
         questionFive.style.display = "none";
     }
     document.getElementById("finalScore").innerHTML = secondsLeft;
 };
+// var yourScore = document.getElementById("finalScore").innerHTML = secondsLeft;
+// var highScore = yourScore;
 
+// var userInitials = document.getElementById("userInit");
+// var initials = userInitials.value;
+
+// function submitScore() {
+// localStorage.setItem("initials", initials);
+// localStorage.setItem("score", highScore);
+// }
+// document.getElementById("submit").addEventListener("click", submitScore);
+
+// var init = localStorage.getItem("initials");
+// var hiSco = localStorage.getItem("highScore");
+
+// function saveScores() {
+//     document.getElementById("init").textContent = init;
+//     document.getElementById("scoreOne").textContent = hiSco;
+// }
+// document.getElementById("submit").addEventListener("click", saveScores);

@@ -22,7 +22,10 @@
     <main class = "gameArea">
 
         <div id ="infoCard">
-            <p id = "gameInfo">Welcome to the Coding Quiz Challenge! Try to answer the following code-related questions within the time alloted. Keep in mind that an incorrect answer will deduct ten seconds from your score/time. Click the start button to begin.<br> Good Luck, Have Fun!</p>
+            <p id = "gameInfo">Welcome to the Coding Quiz Challenge! Try to answer the following code-related questions within the time alloted. Keep in mind that an incorrect answer will deduct ten seconds from your score/time.
+                <br> After each answer attempt a message will appear. Click the message button to continue.
+                <br> Good Luck, Have Fun!
+            </p>
             <button id = "startQuiz">Start Quiz!</button>
         </div>
 
@@ -34,7 +37,7 @@
                 <li><button class = "answerChoices" id ="q1c" correct="false"> C. msg("Good Morning!");</button></li>
                 <li><button class = "answerChoices" id ="q1d" correct="false"> D. alertBox("Good Morning!");</button></li>
             </ul>
-            <p id="q1Message"><span></span></p>
+            <button id="q1Message"><span></span></button>
         </div>
 
         <div class = "questions" id = "cardTwo">
@@ -45,7 +48,7 @@
                 <li><button class = "answerChoices" id ="q2c"> C. getElementById();</button></li>
                 <li><button class = "answerChoices" id ="q2d"> D. getElementsById();</button></li>
             </ul>
-            <p id="q2Message"><span></span></p>
+            <button id="q2Message"><span></span></button>
         </div>
 
         <div class = "questions" id = "cardThree">
@@ -56,7 +59,7 @@
                 <li><button class = "answerChoices" id ="q3c"> C. function:newFunction();</button></li>
                 <li><button class = "answerChoices" id ="q3d"> D. function is newFunction();</button></li>
             </ul>
-            <p id="q3Message"><span></span></p>
+            <button id="q3Message"><span></span></button>
         </div>
 
         <div class = "questions" id = "cardFour">
@@ -67,7 +70,7 @@
                 <li><button class = "answerChoices" id ="q4c"> C. for (i=0; i <= 6);</button></li>
                 <li><button class = "answerChoices" id ="q4d"> D. for (i <= 6, i++);</button></li>
             </ul>
-            <p id="q4Message"><span></span></p>
+            <button id="q4Message"><span></span></button>
         </div>
 
         <div class = "questions" id = "cardFive">
@@ -78,14 +81,15 @@
                 <li><button class = "answerChoices" id ="q5c"> C. var colors = {red,blue,green};</button></li>
                 <li><button class = "answerChoices" id ="q5d"> D. var colors = ["red", "green", "blue"];</button></li>
             </ul>
-            <p id="q5Message"><span></span></p>
+            <button id="q5Message"><span></span></button>
         </div>        
         
         <div id = "gameOver">
             <p>Game Over! Thanks for playing!</p>
             <p id ="score"> Your Score is: <span id="finalScore"></span> </p>
-            <label for= "intitials" id ="initials"> Your Initials </label>
-            <input type="text" name="initials">
+            <label for= "initials" id ="initials"> Your Initials </label>
+            <input type="text" name="initials" id="userInit">
+            <button id ="submit">Submit</button>
         </div>
     </main>
 
