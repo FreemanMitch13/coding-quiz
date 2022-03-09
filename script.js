@@ -186,25 +186,35 @@ function showGameOver() {
     if (gameOver.style.display === "block") {
         questionFive.style.display = "none";
     }
-    document.getElementById("finalScore").innerHTML = secondsLeft;
+     var score = document.getElementById("finalScore").innerHTML = secondsLeft;
+     console.log(score);
+     localStorage.setItem("score", score);
 };
-// var yourScore = document.getElementById("finalScore").innerHTML = secondsLeft;
-// var highScore = yourScore;
 
-// var userInitials = document.getElementById("userInit");
-// var initials = userInitials.value;
-
-// function submitScore() {
-// localStorage.setItem("initials", initials);
-// localStorage.setItem("score", highScore);
-// }
-// document.getElementById("submit").addEventListener("click", submitScore);
+function submitScore() {
+    var initials = document.getElementById("userInit").value;
+    localStorage.setItem("initials", initials);
+}
+document.getElementById("submit").addEventListener("click", submitScore);
 
 // var init = localStorage.getItem("initials");
-// var hiSco = localStorage.getItem("highScore");
+// var hiSco = localStorage.getItem("score");
 
 // function saveScores() {
-//     document.getElementById("init").textContent = init;
-//     document.getElementById("scoreOne").textContent = hiSco;
+
+
+//     return localStorage.getItem("score");
+    
+
+//     // var init = localStorage.getItem("initials");
+//     // var hiSco = localStorage.getItem("score");
+
+//     // console.log(init);
+//     // console.log(hiSco);
+// //     document.getElementById("init").innerHTML = localStorage.initials;
+// //     document.getElementById("scoreOne").innerHTML = localStorage.score;
+//     console.log(localStorage.score);
+//     console.log(localStorage.initials);
 // }
-// document.getElementById("submit").addEventListener("click", saveScores);
+// // saveScores();
+// // document.getElementById("submit").addEventListener("click", saveScores);
