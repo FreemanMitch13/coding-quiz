@@ -25,4 +25,5 @@ Javascript
 
 ### Links
 GitHub Url: https://github.com/FreemanMitch13/coding-quiz
-Live URL: 
+
+Live URL: https://freemanmitch13.github.io/coding-quiz/
